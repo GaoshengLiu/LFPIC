@@ -1,5 +1,5 @@
 # LFPIC
-Learned Focused Plenoptic Image Compression with Local-Global Correlation Learning
+[TMM 2024] Learned Focused Plenoptic Image Compression with Local-Global Correlation Learning, Early Access.
 
 The dense light field sampling of focused plenoptic images (FPIs) yields substantial amounts of redundant data, necessitating efficient compression in practical applications. However, the presence of discontinuous structures and long-distance
 properties in FPIs poses a challenge. In this paper, we propose a novel end-to-end approach for learned focused plenoptic image compression (LFPIC). Specifically, we introduce a local-global correlation learning strategy to build the nonlinear transforms.
