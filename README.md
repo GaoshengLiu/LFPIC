@@ -7,7 +7,7 @@ This strategy can effectively handle the discontinuous structures and leverage l
 
 ## Requirement
 * CompressAI
-* Pyorch
+* PyTorch
 
 ## Dataset
 We use the datasets in [GACN](https://github.com/VincentChandelier/GACN), please follow their work to generate the training and testing data. 
