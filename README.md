@@ -33,6 +33,5 @@ If you find this work helpful, please consider citing the following papers:<br>
 ```
 ## Acknowledgement
 Our work and implementations are based on the following projects: <br> 
-[LF-DFnet](https://github.com/YingqianWang/LF-DFnet)<br> 
-[LF-InterNet](https://github.com/YingqianWang/LF-InterNet)<br> 
+[GACN](https://github.com/VincentChandelier/GACN)<br> 
 We sincerely thank the authors for sharing their code and amazing research work!
