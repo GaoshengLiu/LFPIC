@@ -18,6 +18,10 @@ We use the datasets in [GACN](https://github.com/VincentChandelier/GACN), please
   python train.py -d ./Data/Train --model Net_context -e 50  -lr 1e-4 -n 8  --lambda 1e-1 --batch-size 4  --test-batch-size 1 --aux-learning-rate 1e-4 --patch-size 384 --cuda --save --seed 1926 --clip_max_norm 1.0 --gpu-id 1 --savepath  ./checkpoint/
 
 ## Test
+Update the trained models via
+* Run:
+  ```python updata.py ./MyLocGloCTX005.pth.tar -m Net_context  -n MyLocGloCTX005_new -d updatedCheckpoint
+  
 We provide the updated checkpoints of our method for 6 lambda parameters can be downloaded via https://pan.baidu.com/s/1wRKul1dklLDR5X7hDs_3lw, extraction code:flfc
 * Run:
   ```python
