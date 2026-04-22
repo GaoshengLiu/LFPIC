@@ -5,9 +5,23 @@ The dense light field sampling of focused plenoptic images (FPIs) yields substan
 properties in FPIs poses a challenge. In this paper, we propose a novel end-to-end approach for learned focused plenoptic image compression (LFPIC). Specifically, we introduce a local-global correlation learning strategy to build the nonlinear transforms.
 This strategy can effectively handle the discontinuous structures and leverage long-distance correlations in FPI for high compression efficiency. Additionally, we present a spatial-wise context model tailored for LFPIC to help emphasize the most related symbols during coding and further enhance the rate-distortion performance. Experimental results demonstrate the effectiveness of our proposed method, achieving a 22.16% BD-rate reduction (measured in PSNR) on the public dataset compared to the recent state-of-the-art LFPIC method. This improvement holds significant promise for benefiting the applications of focused plenoptic cameras. 
 
+## Requirement
+* CompressAI
+* Pyorch
 
-The updated checkpoints for 6 lambda parameters can be downloaded via https://pan.baidu.com/s/1wRKul1dklLDR5X7hDs_3lw, extraction code:flfc
+## Dataset
+We use the datasets in [GACN](https://github.com/VincentChandelier/GACN), please follow their work to generate the training and testing data. 
 
+## Training
+* Run:
+  ```python
+  python train.py -d ./Data/Train --model Net_context -e 50  -lr 1e-4 -n 8  --lambda 1e-1 --batch-size 4  --test-batch-size 1 --aux-learning-rate 1e-4 --patch-size 384 --cuda --save --seed 1926 --clip_max_norm 1.0 --gpu-id 1 --savepath  ./checkpoint/
+
+## Test
+We provide the updated checkpoints of our method for 6 lambda parameters can be downloaded via https://pan.baidu.com/s/1wRKul1dklLDR5X7hDs_3lw, extraction code:flfc
+* Run:
+  ```python
+  python Inference.py --dataset ./Data/Train/Raytrix --output_path Ours -m Net_context -p ./updatedCheckpoint/MyLocGloCTX005_new.tar --patch 384
 
 ## Citation
 If you find this work helpful, please consider citing the following papers:<br> 
